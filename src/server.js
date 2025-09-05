@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import path from "path";
 
+import v1Router from "./routes/v1.js";
+
 dotenv.config();
 
 const app = express();
@@ -14,13 +16,8 @@ app.set("views", path.join(process.cwd(), "src/views"));
 app.use(express.static(path.join(process.cwd(), "src/public")));
 app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 
-app.get("/", (req, res) => {
-  res.render("index", {
-    title: "Custom Print - DFW",
-    message: "Welcome to Custom Print - DFW",
-  });
-});
+app.use("/", v1Router);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`listening on port ${port}`);
 });

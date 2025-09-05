@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="icon", href="/images/logo.png", type="image/x-icon")
+    link(rel="stylesheet", href="/css/styles.css")
+    link(rel="stylesheet", href="/css/header.css")
+    link(rel="stylesheet", href="/css/hero.css")
+    link(rel="stylesheet", href="/css/home-page.css")
+    link(rel="stylesheet", href="/css/contact-banner.css")
+    link(rel="stylesheet", href="/css/footer.css")
+  body
+    include partials/header
+    
+    .main-content
+      section.services-content
+        h1 Services
+        p We offer a comprehensive range of printing and visual marketing services to help your business stand out.
+        
+    include partials/footer 

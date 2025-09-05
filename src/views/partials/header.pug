@@ -5,9 +5,9 @@ header.header
     nav.nav
       ul.nav-links
         li
-          a(href="/", class="active") Home
+          a(href="/", class=activePage === "home" ? "active" : "") Home
         li
-          a(href="/") Services
+          a(href="/services", class=activePage === "services" ? "active" : "") Services
         li
-          a(href="/") Products
+          a(href="/", class=activePage === "products" ? "active" : "") Products
       a.quote-btn(href="/") Request a Quote 
