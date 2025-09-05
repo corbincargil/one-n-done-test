@@ -1,0 +1,188 @@
+:root {
+  --primary: #c9533a;
+  --secondary: #95c93a;
+  --background: #222222;
+  --footer-bg-color: #1b1f1c;
+  --text: #ffffff;
+  --light-gray: #ecf0f1;
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--footer-bg-color);
+  height: 240px;
+  padding: 2rem 0 1rem 0;
+  border: none;
+}
+
+.footer-content {
+  max-width: var(--content-max-width);
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+/* Footer links (left column) */
+.footer-links {
+  height: 100%;
+  justify-self: start;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--primary);
+}
+
+/* Copyright (bottom of left column) */
+.footer-copyright p {
+  color: var(--light-gray);
+  font-family: Roboto, sans-serif;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Footer logo (center column) */
+.footer-logo {
+  justify-self: center;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1.5rem;
+}
+
+.footer-logo-image {
+  position: relative;
+  bottom: 25px;
+  width: 110px;
+  height: auto;
+}
+
+/* Footer actions (bottom of center column) */
+.footer-actions {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-contact-link {
+  color: var(--text);
+  text-decoration: underline;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-link:hover {
+  color: var(--primary);
+}
+
+/* Social media buttons */
+.footer-social {
+  padding-bottom: 6px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-btn {
+  color: var(--text);
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn:hover {
+  color: var(--primary);
+}
+
+.social-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer brand (top right) */
+.footer-brand {
+  justify-self: end;
+  max-width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.footer-brand h2 {
+  color: var(--text);
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.footer-brand p {
+  color: var(--light-gray);
+  font-family: Roboto, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Contact info (bottom of right column) */
+.footer-contact {
+  text-align: right;
+  margin-top: auto;
+}
+
+.footer-contact h3 {
+  color: var(--text);
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.footer-contact p {
+  color: var(--light-gray);
+  font-family: Roboto, sans-serif;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  line-height: 1.3;
+}

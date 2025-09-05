@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet", href="/css/styles.css")
+    link(rel="stylesheet", href="/css/header.css")
+    link(rel="stylesheet", href="/css/footer.css")
+  body
+    include partials/header
+    
+    .main-content
+      .container
+        h1= title
+        .welcome-message
+          p= message
+        
+        section
+          h2 What we do 
+          p In today's fast-paced business environment, visual branding isn't just important—it's critical. Custom Print DFW provides premium print services that capture attention and drive business results.
+        
+    include partials/footer
