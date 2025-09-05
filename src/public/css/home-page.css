@@ -1,0 +1,115 @@
+/* Section containers */
+.what-we-do,
+.dfw-difference,
+.testimonial {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Section headers */
+.what-we-do h2,
+.dfw-difference h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Section paragraphs */
+.what-we-do p,
+.dfw-difference p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.8;
+}
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin: 2rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-item {
+  height: 175px;
+  width: 175px;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+  width: 200px;
+  height: 62px;
+  background-color: var(--secondary);
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: Gothic A1, sans-serif;
+}
+
+.learn-more-btn:hover {
+  background-color: #7db32a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(149, 201, 58, 0.3);
+}
+
+/* Testimonial Section */
+.testimonial-content {
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile-image {
+  width: 117px;
+  height: 117px;
+  background-color: var(--light-gray);
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-text {
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--text);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.attribution {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 24px;
+  padding-right: 1rem;
+}

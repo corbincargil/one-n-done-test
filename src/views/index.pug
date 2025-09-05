@@ -8,19 +8,59 @@ html(lang="en")
     link(rel="stylesheet", href="/css/styles.css")
     link(rel="stylesheet", href="/css/header.css")
     link(rel="stylesheet", href="/css/hero.css")
+    link(rel="stylesheet", href="/css/home-page.css")
+    link(rel="stylesheet", href="/css/contact-banner.css")
     link(rel="stylesheet", href="/css/footer.css")
   body
     include partials/header
     include partials/hero
     
     .main-content
-      .container
-        h1= title
-        .welcome-message
-          p= message
         
-        section
+        section.what-we-do
           h2 What we do 
           p In today's fast-paced business environment, visual branding isn't just important—it's critical. Custom Print DFW provides premium print services that capture attention and drive business results.
+          
+          .image-grid
+            .image-item
+              img(src="/images/image9.jpg", alt="Print Service 1")
+            .image-item
+              img(src="/images/image8.jpg", alt="Print Service 2")
+            .image-item
+              img(src="/images/image7.jpg", alt="Print Service 3")
+            .image-item
+              img(src="/images/image6.jpg", alt="Print Service 4")
+            .image-item
+              img(src="/images/embroidery.jpg", alt="Print Service 5")
+            .image-item
+              img(src="/images/image12.jpg", alt="Print Service 6")
+            .image-item
+              img(src="/images/image11.jpg", alt="Print Service 7")
+            .image-item
+              img(src="/images/image10.jpg", alt="Print Service 8")
+          
+          .button-container
+            button.learn-more-btn Learn More
         
+        section.dfw-difference
+          h2 The Custom Print DFW Difference
+          p Our commitment to your success extends beyond completing individual projects to encompass your overall market presence and brand positioning. When you partner with Custom Print DFW, you gain more than a vendor—you secure a dedicated visual marketing ally focused on contributing to your bottom-line performance. This fundamental difference explains why business leaders throughout the DFW metroplex increasingly choose Custom Print DFW as their exclusive print partner.
+          
+          .image-grid
+            .image-item
+              img(src="/images/image4.jpg", alt="Business Solutions")
+            .image-item
+              img(src="/images/image2.jpg", alt="Vehicle Wraps")
+            .image-item
+              img(src="/images/image10.jpg", alt="LED Signage")
+            .image-item
+              img(src="/images/image1.jpg", alt="Custom Printing")
+        
+        section.testimonial
+          .testimonial-content
+            .profile-image
+            .quote-text "I'm a little late, But this business goes above and beyond to get the job done, they listen to every detail you ask and when they bring your vision to life, it is absolutely amazing!! Thank you Jessica and the crew for always providing world class service, and always going above and beyond. You have us hooked for all of our future events."
+            .attribution - Nieman Gas
+        
+    include partials/contact-banner
     include partials/footer
