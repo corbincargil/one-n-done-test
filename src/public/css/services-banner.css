@@ -1,0 +1,182 @@
+:root {
+  --skew-deg: 15;
+  --panel-overlap: -4vw;
+  --transition-duration: 400ms;
+  --expanded-width: 70%;
+  --expanded-width-small: 65%;
+  --collapsed-width: 10%;
+  --collapsed-width-small: 15%;
+}
+
+/* Container styles */
+.services-banner {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.services-banner-container {
+  width: 76vw;
+  max-width: 1200px;
+  height: 420px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Panel styles */
+.panel {
+  width: calc(25% + 4vw);
+  position: relative;
+  overflow: hidden;
+  transition: width var(--transition-duration) ease-in-out,
+    clip-path var(--transition-duration) ease-in-out;
+}
+
+.panel:not(:first-child) {
+  margin-left: var(--panel-overlap);
+  transition: width var(--transition-duration) ease-in-out,
+    clip-path var(--transition-duration) ease-in-out,
+    margin-left var(--transition-duration) ease-in-out;
+}
+
+/* Panel image styles */
+.panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-duration) ease-out;
+}
+
+/* Diagonal clip paths */
+.panel:first-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.panel:not(:first-child):not(:last-child) {
+  clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.panel:last-child {
+  clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Panel labels */
+.panel-label {
+  position: absolute;
+  bottom: 20px;
+  left: -250%;
+  transition: left var(--transition-duration) ease-in-out;
+  z-index: 10;
+}
+
+.panel-label a {
+  display: inline-block;
+  background: rgb(59, 88, 172);
+  color: var(--text);
+  height: 80px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.panel-label a:hover {
+  background: rgba(54, 80, 157, 0.99);
+}
+
+/* Hover States */
+.services-banner-container:hover .panel:not(:hover) {
+  width: var(--collapsed-width);
+  flex: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.services-banner-container:hover .panel:hover {
+  width: var(--expanded-width);
+  flex: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  border-left: 3px solid rgb(90, 123, 38);
+}
+
+.services-banner-container:hover .panel:not(:first-child):not(:hover) {
+  margin-left: calc(var(--panel-overlap));
+}
+
+.services-banner-container:hover .panel:not(:first-child):hover {
+  margin-left: var(--panel-overlap);
+}
+
+.services-banner-container:hover .panel:not(:hover) .panel-label {
+  left: -800px !important;
+}
+
+.services-banner-container:hover .panel:hover .panel-label {
+  left: 0;
+}
+
+/* Dimming effect */
+.services-banner-container:hover .panel:not(:hover)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(65, 64, 64, 0.6);
+  transition: background-color var(--transition-duration) ease-out;
+  opacity: 1;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .services-banner-container {
+    height: 320px;
+  }
+  .panel {
+    width: calc(25% + 10vw);
+  }
+  .panel:not(:first-child) {
+    margin-left: -8vw;
+  }
+
+  .services-banner-container:hover .panel:hover .panel-label {
+    left: -50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-banner-container {
+    height: 260px;
+  }
+
+  .panel {
+    width: calc(25% + 15vw);
+  }
+
+  .panel:not(:first-child) {
+    margin-left: -12vw;
+  }
+
+  .panel-label {
+    left: -800px;
+  }
+
+  .panel-label a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .services-banner-container:hover .panel:hover .panel-label {
+    left: -260px;
+  }
+}

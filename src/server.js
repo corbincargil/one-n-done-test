@@ -19,5 +19,5 @@ app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 app.use("/", v1Router);
 
 app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+  console.log(`running at: http://localhost:${port}`);
 });

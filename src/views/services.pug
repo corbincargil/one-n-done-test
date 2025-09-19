@@ -10,13 +10,16 @@ html(lang="en")
     link(rel="stylesheet", href="/css/hero.css")
     link(rel="stylesheet", href="/css/home-page.css")
     link(rel="stylesheet", href="/css/contact-banner.css")
+    link(rel="stylesheet", href="/css/services-banner.css")
     link(rel="stylesheet", href="/css/footer.css")
   body
     include partials/header
     
     .main-content
       section.services-content
-        h1 Services
-        p We offer a comprehensive range of printing and visual marketing services to help your business stand out.
+        h1 What We Offer
+        p Custom Print DFW offers comprehensive printing services that include:
+        include partials/services-banner
+
         
-    include partials/footer 
+    include partials/footer
