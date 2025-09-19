@@ -71,3 +71,16 @@
 .quote-btn:hover {
   background-color: #b04530;
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    font-size: 12px;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-image {
+    display: none;
+  }
+}
